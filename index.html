@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Check</title>
+  </head>
+  <body>
+    <input type="number" id="age" placeholder="እድሜህን አስገባ" />
+    <button onclick="sendStudentAge()">እድሜ አረጋግጥ</button>
+
+    <div id="ruth"></div>
+
+    <script>
+      function sendStudentAge() {
+        var studentAge = Number(document.getElementById("age").value);
+        var decision;
+
+        if (studentAge >= 18) {
+          decision = "የመኪና መንዳት ፈተና ለመውሰድ ብቁ ነህ።";
+        } else {
+          decision = "እድሜህ 18 አልደረሰም።";
+        }
+
+        document.getElementById("ruth").textContent = decision;
+      }
+    </script>
+  </body>
+</html>
