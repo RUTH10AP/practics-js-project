@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Age Check</title>
   </head>
+
   <body>
     <input type="number" id="age" placeholder="እድሜህን አስገባ" />
     <button onclick="sendStudentAge()">እድሜ አረጋግጥ</button>
 
     <div id="ruth"></div>
+    <div id="output"></div>
 
+    <!-- ✅ JavaScript MUST be inside <script> -->
     <script>
       function sendStudentAge() {
         var studentAge = Number(document.getElementById("age").value);
@@ -24,6 +27,12 @@
 
         document.getElementById("ruth").textContent = decision;
       }
+
+      // Array example
+      var myChannelb = ["BiniTutor", 126, "amharic", true];
+      var singleValue = myChannelb[2];
+
+      document.getElementById("output").textContent = myChannelb;
     </script>
   </body>
 </html>
